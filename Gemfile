@@ -70,3 +70,5 @@ end
 gem "webpacker", "~> 5.4"
 
 gem 'sassc-rails'
+
+gem 'faker'
