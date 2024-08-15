@@ -32,6 +32,14 @@ gem 'hamlit'
 
 gem 'annotate'
 
+gem 'better_errors'
+
+gem 'binding_of_caller'
+
+gem 'rubocop', require:false
+
+gem 'rubocop-rails', require:false
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
@@ -55,14 +63,19 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ]
   gem 'pry-byebug'
   gem'erb2haml'
-  gem 'rubocop-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
 end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
-  gem "web-console"
+  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'web-console', '>= 3.3.0'
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'erb2haml'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
